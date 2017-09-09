@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+//import { NgModule } from '@angular/core';
+//import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,19 @@ import { AppRoutingModule } from './app.routing';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
+import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+
+//newly install component
+import { FrontendComponent } from './frontend/frontend.component';
+import { MapUiComponent } from './maps-ui/map-ui.component';
+
+//start here
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';
+
+import { AgmCoreModule } from '@agm/core';
+//end here
+
 
 @NgModule({
   imports: [
@@ -24,11 +37,19 @@ import { FullLayoutComponent } from './layouts/full-layout.component';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    //start here
+    AgmCoreModule.forRoot({
+    apiKey: 'AIzaSyDdBV6K2QQIECCWQhn71DKKttZFb7wyPQQ'
+  }), //end here
     ChartsModule
   ],
+
   declarations: [
     AppComponent,
     FullLayoutComponent,
+    SimpleLayoutComponent,
+    MapUiComponent,
+    FrontendComponent,
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,

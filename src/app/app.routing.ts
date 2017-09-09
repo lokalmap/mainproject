@@ -3,26 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
+import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+
+//files to be imported
+import { FrontendComponent } from './frontend/frontend.component';
+import { MapUiComponent } from './maps-ui/map-ui.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },
-  {
-    path: '',
-    component: FullLayoutComponent,
-    data: {
-      title: 'Home'
-    },
-    children: [
-      {
-        path: 'dashboard',
-        loadChildren: './dashboard/dashboard.module#DashboardModule'
-      },
-    ]
-  }
+
+  {path: '', redirectTo: '/simple-layout/frontend', pathMatch: 'full'},
+  {path: 'simple-layout' , component: SimpleLayoutComponent, children: [
+    {path: 'frontend', component: FrontendComponent },
+    {path: 'maps-ui', component: MapUiComponent }
+  ]}
 ];
 
 @NgModule({
