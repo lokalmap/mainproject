@@ -15,6 +15,10 @@ export const routes: Routes = [
   {path: 'simple-layout' , component: SimpleLayoutComponent, children: [
     {path: 'frontend', component: FrontendComponent },
     {path: 'maps-ui', component: MapUiComponent }
+  ]},
+
+  {path: 'full-layout', component: FullLayoutComponent, children: [
+    
   ]}
 ];
 
