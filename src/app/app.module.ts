@@ -28,6 +28,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
 import { AgmCoreModule } from '@agm/core';
+import { UserprofComponent } from './usercomp/userprof/userprof.component';
+import { RegisterComponent } from './usercomp/register/register.component';
+import { LoginComponent } from './usercomp/login/login.component';
+import { PartialsComponent } from './usercomp/partials/partials.component';
 //end here
 
 
@@ -55,7 +59,11 @@ import { AgmCoreModule } from '@agm/core';
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
-    AsideToggleDirective
+    AsideToggleDirective,
+    UserprofComponent,
+    RegisterComponent,
+    LoginComponent,
+    PartialsComponent
   ],
   providers: [{
     provide: LocationStrategy,
