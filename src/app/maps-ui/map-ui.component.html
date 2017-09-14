@@ -1,2 +1,13 @@
 <!-- this code is for the map -->
-<agm-map style= "height: 1000px" [latitude]="lat" [longitude]="lng"></agm-map>
+
+
+<div *ngIf="lat && lng">
+  <agm-map style= "height: 1000px" [latitude]="lat" [longitude]="lng" [zoom]="17">
+    <agm-marker [latitude]="lat" [longitude]="lng">
+      <agm-info-window>
+        <h3><strong>Howdy!</strong></h3>
+        <p>You are here!</p>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+<div>

@@ -13,9 +13,7 @@
   </div>
 </nav>
 
-
-<div class="container-fluid hero_Search">
-
+<div class="container-fluid hero_Search" >
 
     <div class="clearfix hero_SearchBody ">
 
@@ -26,12 +24,24 @@
 
   <div class="input-prepend input-group hero_Input">
     <span class="input-group-addon"><i class="fa fa-search"></i></span>
-    <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
-    <span class="input-group-btn">
-      <button class="btn btn-danger" type="button" routerLink="/simple-layout/maps-ui">Search</button>
+    <input id="prependedInput" class="form-control" #search formControl="searchControl" type="search" placeholder="What are you looking for?">
 
-        </span>
+    <!---<span class="input-group-btn">
+        <button class="btn btn-danger" type="button" routerLink="/simple-layout/maps-ui">Search</button>
+    </span>-->
+
     </div>
+
+    <div *ngIf="lat && lng">
+      <agm-map style= "height: 500px" [latitude]="lat" [longitude]="lng" [zoom]="17">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+          <agm-info-window>
+            <h3><strong>Howdy!</strong></h3>
+            <p>You are here!</p>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    <div>
 
 
 </div>

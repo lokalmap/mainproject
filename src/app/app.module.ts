@@ -39,7 +39,9 @@ import { AgmCoreModule } from '@agm/core';
     TabsModule.forRoot(),
     //start here
     AgmCoreModule.forRoot({
-    apiKey: 'AIzaSyDdBV6K2QQIECCWQhn71DKKttZFb7wyPQQ'
+    apiKey: 'AIzaSyDdBV6K2QQIECCWQhn71DKKttZFb7wyPQQ',
+    libraries: ["places"]
+
   }), //end here
     ChartsModule
   ],

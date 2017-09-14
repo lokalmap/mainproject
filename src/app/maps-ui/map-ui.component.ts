@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
+
+import { } from 'googlemaps';
+import { MapsAPILoader } from '@agm/core';
+import { FormControl } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-map-ui',
@@ -9,16 +15,60 @@ import { AgmCoreModule } from '@agm/core';
 
 
 export class MapUiComponent implements OnInit {
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  public searchControl: FormControl;
+  lat: number;
+  lng: number;
+  zoom: number;
+
+  @ViewChild("search")
+  public searchElementRef: ElementRef;
+
+  constructor(
+      private mapsAPILoader: MapsAPILoader,
+      private ngZone: NgZone
+    ) {}
+
+   ngOnInit() {
 
 
-  constructor() {
+        this.searchControl = new FormControl();
 
+    //set current position
+    this.setCurrentPosition();
+    //load Places Autocomplete
+this.mapsAPILoader.load().then(() => {
+  let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+    types: ["address"]
+  });
+  autocomplete.addListener("place_changed", () => {
+    this.ngZone.run(() => {
+      //get the place result
+      let place: google.maps.places.PlaceResult = autocomplete.getPlace();
 
-   }
+      //verify result
+      if (place.geometry === undefined || place.geometry === null) {
+        return;
+      }
 
-  ngOnInit() {
+      //set latitude, longitude and zoom
+      this.lat = place.geometry.location.lat();
+      this.lng = place.geometry.location.lng();
+    });
+  });
+
+});
+
+      }
+
+     private setCurrentPosition() {
+       /// set user's location
+       if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+        this.zoom = 12;
+      });
+    }
   }
 
 }
