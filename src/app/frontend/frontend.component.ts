@@ -32,9 +32,25 @@ ngOnInit() {
   this.setCurrentPosition();
 
   this.mapsAPILoader.load().then(() => {
+
     let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-      types: ["address"]
+      types: ["address"],
+
+
     });
+
+    // Bias the SearchBox results towards current map's viewport.
+  autocomplete.addListener('bounds_changed', function() {
+    this.searchElementRef.nativeElement.setBounds(autocomplete.getBounds());
+  });
+
+  // Bias the SearchBox results towards current map's viewport.
+autocomplete.addListener('bounds_changed', function() {
+  this.searchElementRef.nativeElement.setBounds(autocomplete.getBounds());
+});
+
+
+
     autocomplete.addListener("place_changed", () => {
       this.ngZone.run(() => {
         //get the place result
