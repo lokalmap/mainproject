@@ -8,17 +8,19 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 //files to be imported
 import { FrontendComponent } from './frontend/frontend.component';
 import { MapUiComponent } from './maps-ui/map-ui.component';
-
+import { PartialsComponent } from './usercomp/partials/partials.component';
 export const routes: Routes = [
 
   {path: '', redirectTo: '/simple-layout/frontend', pathMatch: 'full'},
-  {path: 'simple-layout' , component: SimpleLayoutComponent, children: [
+    {path: 'simple-layout' , component: SimpleLayoutComponent, children: [
     {path: 'frontend', component: FrontendComponent },
     {path: 'maps-ui', component: MapUiComponent }
   ]},
+  {path: 'users', component: PartialsComponent, children: [
 
+  ]},
   {path: 'full-layout', component: FullLayoutComponent, children: [
-    
+
   ]}
 ];
 
