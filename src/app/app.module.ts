@@ -32,6 +32,9 @@ import { UserprofComponent } from './usercomp/userprof/userprof.component';
 import { RegisterComponent } from './usercomp/register/register.component';
 import { LoginComponent } from './usercomp/login/login.component';
 import { PartialsComponent } from './usercomp/partials/partials.component';
+
+//Services
+import { DataService } from './services/data.service';
 //end here
 
 
@@ -65,7 +68,9 @@ import { PartialsComponent } from './usercomp/partials/partials.component';
     LoginComponent,
     PartialsComponent
   ],
-  providers: [{
+  providers: [
+  DataService,
+  {
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
