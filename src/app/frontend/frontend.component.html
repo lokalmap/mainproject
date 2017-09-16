@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-warning">
+<nav class="navbar navbar-toggleable-md navbar-light">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,8 +13,8 @@
   </div>
 </nav>
 
-<div class="container" >
-  <div class="row">
+<div class="container front-end_bg" >
+  <div class="row ">
     <div class="clearfix hero_SearchBody col mt-5 pt-5 col-md-6 col-sm-6">
 
     <h1 class="float-left display-4 mr-2">Lokalmap</h1>
@@ -30,8 +30,9 @@
 
       </div>
       <br>
-
+<!--
           <div class="card card-inverse card-warning">
+            <img src="/assets/img/1.jpg" alt="" class="h-25">
             <div class="card-header lead">
               Name of the Store
             </div>
@@ -41,15 +42,29 @@
               aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
               exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
             </div>
-          </div>
-  
+          </div> -->
+
+    <div class="card">
+  <img class="card-img-top initialize_Img mb-3" src="/assets/img/1.jpg" alt="initialize">
+  <div class="card-header lead">
+    Name of the Store
   </div>
+  <div class="card-block lead">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+  </div>
+  </div>
+
+  </div>
+  
 
   <div class="otherSide col mt-5 pt-5 col-md-6 col-sm-6">
 
 
     <div *ngIf="lat && lng">
-      <agm-map style= "height: 500px" [latitude]="lat" [longitude]="lng" [zoom]="17">
+      <agm-map style= "height: 505px" [latitude]="lat" [longitude]="lng" [zoom]="17">
         <agm-marker [latitude]="lat" [longitude]="lng">
           <agm-info-window>
             <h3><strong>Howdy!</strong></h3>
