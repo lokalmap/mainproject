@@ -13,11 +13,11 @@ import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 
 // Routing Module
-import { AppRoutingModule } from './app.routing';
+import { AppRoutingModule } from './services/app.routing';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
-import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+import { LokalHeader } from './layouts/lokalheader.component';
 
 //newly install component
 import { FrontendComponent } from './frontend/frontend.component';
@@ -56,7 +56,7 @@ import { DataService } from './services/data.service';
   declarations: [
     AppComponent,
     FullLayoutComponent,
-    SimpleLayoutComponent,
+    LokalHeader,
     MapUiComponent,
     FrontendComponent,
     NAV_DROPDOWN_DIRECTIVES,
