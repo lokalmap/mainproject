@@ -1,4 +1,4 @@
-//import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 //import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
@@ -25,7 +25,7 @@ import { MapUiComponent } from './maps-ui/map-ui.component';
 
 //start here
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+
 
 import { AgmCoreModule } from '@agm/core';
 import { UserprofComponent } from './usercomp/userprof/userprof.component';
@@ -33,6 +33,7 @@ import { RegisterComponent } from './usercomp/register/register.component';
 import { LoginComponent } from './usercomp/login/login.component';
 import { PartialsComponent } from './usercomp/partials/partials.component';
 
+import { environment } from '../environments/environment';
 //Services
 import { DataService } from './services/data.service';
 //end here
@@ -46,7 +47,7 @@ import { DataService } from './services/data.service';
     TabsModule.forRoot(),
     //start here
     AgmCoreModule.forRoot({
-    apiKey: 'AIzaSyDdBV6K2QQIECCWQhn71DKKttZFb7wyPQQ',
+    apiKey: environment.agm_gmap_apiKey,
     libraries: ["places"]
 
   }), //end here
