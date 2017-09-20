@@ -12,6 +12,9 @@ import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 
+//carousel
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 // Routing Module
 import { AppRoutingModule } from './services/app.routing';
 
@@ -42,6 +45,7 @@ import { DataService } from './services/data.service';
 @NgModule({
   imports: [
     BrowserModule,
+    CarouselModule.forRoot(),
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
@@ -51,7 +55,8 @@ import { DataService } from './services/data.service';
     libraries: ["places"]
 
   }), //end here
-    ChartsModule
+    ChartsModule,
+
   ],
 
   declarations: [

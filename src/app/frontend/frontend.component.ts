@@ -7,6 +7,9 @@ import { AgmCoreModule } from '@agm/core';
 import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
 
+//carousel
+
+
 
 @Component({
   selector: 'app-frontend',
