@@ -18,7 +18,11 @@ export const routes: Routes = [
   {path: '', redirectTo: '/main/frontend', pathMatch: 'full'},
   {path: 'main' , component: LokalHeader, children: [
     {path: 'frontend', component: FrontendComponent },
-    {path: 'maps-ui', component: MapUiComponent }
+    {path: 'maps-ui', component: MapUiComponent },
+    {path: 'users', component: PartialsComponent},
+    {path: 'login', component: LoginComponent },
+    {path: 'register', component: RegisterComponent }
+
   ]},
   {path: 'users', component: PartialsComponent, children: [
     {path: 'login', component: LoginComponent },
