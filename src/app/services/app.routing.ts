@@ -15,15 +15,7 @@ import { RegisterComponent } from '../usercomp/register/register.component';
 import { LoginComponent } from '../usercomp/login/login.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo: '/main/frontend', pathMatch: 'full'},
-  {path: 'main' , component: LokalHeader, children: [
-    {path: 'frontend', component: FrontendComponent },
-    {path: 'maps-ui', component: MapUiComponent },
-    {path: 'users', component: PartialsComponent},
-    {path: 'login', component: LoginComponent },
-    {path: 'register', component: RegisterComponent }
-
-  ]},
+  {path: '', component:FrontendComponent, pathMatch: 'full'},
   {path: 'users', component: PartialsComponent, children: [
     {path: 'login', component: LoginComponent },
     {path: 'register', component: RegisterComponent }
@@ -33,7 +25,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes, { useHash: false }) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
