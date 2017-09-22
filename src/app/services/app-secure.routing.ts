@@ -7,7 +7,7 @@ export const routes: Routes = [
 
   {path: '', component:FullLayoutComponent, pathMatch: 'full'},
 
-    
+    {path: 'full-layout', component: FullLayoutComponent}
 
 
 
