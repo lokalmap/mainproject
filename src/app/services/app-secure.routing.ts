@@ -5,12 +5,7 @@ import { FullLayoutComponent } from '../layouts/full-layout.component';
 
 export const routes: Routes = [
 
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: '', component: FullLayoutComponent, children:
-    [ { path: 'dashboard',
-        loadChildren: './dashboard/dashboard.module#DashboardModule'}
 
-  ]}
 
 ];
 
