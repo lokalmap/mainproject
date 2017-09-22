@@ -29,6 +29,7 @@ import { HistoryComponent } from '../customers/history/history.component';
 import { BookReserveComponent } from '../customers/book-reserve/book-reserve.component';
 import { InfoComponent } from '../customers/info/info.component';
 
+
 export const routes: Routes = [
   {path: '', component:FrontendComponent, pathMatch: 'full'},
   {path: 'users', component: PartialsComponent, children: [
@@ -51,9 +52,7 @@ export const routes: Routes = [
     {path: 'info', component: InfoComponent },
     {path: 'chat', component: ChatComponent }
   ]},
-  {path: 'full-layout', component: FullLayoutComponent, children: [
-  //  {path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
-  ]}
+
 ];
 
 @NgModule({

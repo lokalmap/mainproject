@@ -18,9 +18,11 @@ import { MapsAPILoader } from '@agm/core';
 })
 export class FrontendComponent implements OnInit {
  public searchControl: FormControl;
+
  lat: number;
  lng: number;
  zoom: number;
+
 
  constructor(
      private mapsAPILoader: MapsAPILoader,

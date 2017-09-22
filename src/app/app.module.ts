@@ -14,6 +14,7 @@ import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 
 //carousel
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CollapseModule } from 'ngx-bootstrap';
 
 // Routing Module
 import { AppRoutingModule } from './services/app.routing';
@@ -52,6 +53,7 @@ import { HomeComponent } from './customers/home/home.component';
 import { HistoryComponent } from './customers/history/history.component';
 import { BookReserveComponent } from './customers/book-reserve/book-reserve.component';
 import { InfoComponent } from './customers/info/info.component';
+
 //end here
 
 
@@ -59,6 +61,7 @@ import { InfoComponent } from './customers/info/info.component';
   imports: [
     BrowserModule,
     CarouselModule.forRoot(),
+    CollapseModule,
     AppRoutingModule,
     AppSecureRoutingModule,
     BsDropdownModule.forRoot(),
