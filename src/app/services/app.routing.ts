@@ -17,10 +17,12 @@ import { LoginComponent } from '../usercomp/login/login.component';
 import { ProvidersComponent } from '../providers/providers.component';
 import { CustomersComponent } from '../customers/customers.component';
 import { DashboardComponent } from '../providers/dashboard/dashboard.component';
+import { PbookingsComponent } from '../providers/pbookings/pbookings.component';
 import { SumInventoryComponent } from '../providers/sum-inventory/sum-inventory.component';
 import { MyInventoryComponent } from '../providers/my-inventory/my-inventory.component';
 import { StatisticsComponent } from '../providers/statistics/statistics.component';
-import { ChatComponent } from '../providers/chat/chat.component';
+import { PChatComponent } from '../providers/chat/chat.component';
+import { CChatComponent } from '../customers/chat/chat.component';
 import { AdsComponent } from '../providers/ads/ads.component';
 import { SearchComponent } from '../providers/search/search.component';
 import { HomeComponent } from '../customers/home/home.component';
@@ -33,7 +35,8 @@ export const routes: Routes = [
   {path: '', component:FrontendComponent, pathMatch: 'full'},
   {path: 'users', component: PartialsComponent, children: [
     {path: 'login', component: LoginComponent },
-    {path: 'register', component: RegisterComponent }
+    {path: 'register', component: RegisterComponent },
+
 
   ]},
   {path: 'customers', component: CustomersComponent, children: [
@@ -41,14 +44,17 @@ export const routes: Routes = [
     {path: 'history', component: HistoryComponent },
     {path: 'bookings', component: BookReserveComponent },
     {path: 'info', component: InfoComponent },
-    {path: 'chat', component: ChatComponent }
+    {path: 'chat', component: CChatComponent }
   ]},
   {path: 'providers', component: ProvidersComponent, children: [
-    {path: 'home', component: HomeComponent },
-    {path: 'history', component: HistoryComponent },
-    {path: 'bookings', component: BookReserveComponent },
-    {path: 'info', component: InfoComponent },
-    {path: 'chat', component: ChatComponent }
+    {path: 'pbookings', component: PbookingsComponent },
+    {path: 'dashboard', component: DashboardComponent },
+    {path: 'inventory', component: MyInventoryComponent },
+    {path: 'summary', component: SumInventoryComponent },
+    {path: 'statistics', component: StatisticsComponent },
+    {path: 'chat', component: PChatComponent },
+    {path: 'ads', component: AdsComponent },
+    {path: 'search', component: SearchComponent }
   ]},
 
 ];

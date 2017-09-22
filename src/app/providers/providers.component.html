@@ -1,9 +1,9 @@
 <header class="app-header navbar">
-    <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button"  (click)="testf()">&#9776;</button>
-    <a class="navbar-brand"></a>
-    <ul class="nav navbar-nav hidden-md-down">
+    <!--<button class="navbar-toggler d-lg-none" type="button" (click)="testf()" >&#9776;</button>-->
+    <a class="navbar-brand" [routerLink]="['/']"></a>
+    <ul class="nav navbar-nav mr-auto d-md-down-none">
         <li class="nav-item">
-            <a class="nav-link navbar-toggler sidebar-toggler" routerLink="/customers" (click)="testf()">&#9776;</a>
+            <a class="nav-link navbar-toggler" href="" appSidebarToggler>&#9776;</a>
         </li>
     </ul>
 </header>
@@ -12,11 +12,14 @@
         <nav class="sidebar-nav">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/home']"><i class="icon-speedometer"></i> Home <span class="badge badge-info">NEW</span></a>
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/history']"><i class="icon-speedometer"></i> History <span class="badge badge-info">NEW</span></a>
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/bookings']"><i class="icon-speedometer"></i> Bookings <span class="badge badge-info">NEW</span></a>
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/info']"><i class="icon-speedometer"></i> Profile Info <span class="badge badge-info">NEW</span></a>
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/chat']"><i class="icon-speedometer"></i> Chat <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/pbookings']"><i class="icon-speedometer"></i> Bookings <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/inventory']"><i class="icon-speedometer"></i> Inventory <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/summary']"><i class="icon-speedometer"></i> List Summary <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/statistics']"><i class="icon-speedometer"></i> Statistics <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/chat']"><i class="icon-speedometer"></i> Chat <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/ads']"><i class="icon-speedometer"></i> Ads <span class="badge badge-info">NEW</span></a>
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/search']"><i class="icon-speedometer"></i> Search <span class="badge badge-info">NEW</span></a>
                 </li>
             </ul>
         </nav>

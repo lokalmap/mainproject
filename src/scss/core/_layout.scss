@@ -7,9 +7,21 @@
 }
 
 // app-dashboard and app-root are Angular2 selectors. You can add here your own selectors if you need.
-.app,
+
+.app-book-reserve,
+app-cchat,
+app-history,
+app-home,
+app-customers,
 app-dashboard,
-app-root {
+app-ads,
+app-pchat,
+app-dashboard,
+app-my-inventory,
+app-pbookings,
+app-search,
+app-statistics,
+app-sum-inventory{
   display: flex;
   flex-direction: column;
   min-height: 100vh;

@@ -46,13 +46,15 @@ import { DashboardComponent } from './providers/dashboard/dashboard.component';
 import { SumInventoryComponent } from './providers/sum-inventory/sum-inventory.component';
 import { MyInventoryComponent } from './providers/my-inventory/my-inventory.component';
 import { StatisticsComponent } from './providers/statistics/statistics.component';
-import { ChatComponent } from './providers/chat/chat.component';
+import { PChatComponent } from './providers/chat/chat.component';
+import { CChatComponent } from './customers/chat/chat.component';
 import { AdsComponent } from './providers/ads/ads.component';
 import { SearchComponent } from './providers/search/search.component';
 import { HomeComponent } from './customers/home/home.component';
 import { HistoryComponent } from './customers/history/history.component';
 import { BookReserveComponent } from './customers/book-reserve/book-reserve.component';
 import { InfoComponent } from './customers/info/info.component';
+import { PbookingsComponent } from './providers/pbookings/pbookings.component';
 
 //end here
 
@@ -95,13 +97,15 @@ import { InfoComponent } from './customers/info/info.component';
     SumInventoryComponent,
     MyInventoryComponent,
     StatisticsComponent,
-    ChatComponent,
+    PChatComponent,
+    CChatComponent,
     AdsComponent,
     SearchComponent,
     HomeComponent,
     HistoryComponent,
     BookReserveComponent,
-    InfoComponent
+    InfoComponent,
+    PbookingsComponent
   ],
   providers: [
   DataService,
