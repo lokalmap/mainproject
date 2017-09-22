@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Layouts
-import { FullLayoutComponent } from '../layouts/full-layout.component';
 import { LokalHeader } from '../layouts/lokalheader.component';
 
 //files to be imported
@@ -34,8 +33,7 @@ export const routes: Routes = [
   {path: '', component:FrontendComponent, pathMatch: 'full'},
   {path: 'users', component: PartialsComponent, children: [
     {path: 'login', component: LoginComponent },
-    {path: 'register', component: RegisterComponent },
-    {path: 'full-layout', component: FullLayoutComponent}
+    {path: 'register', component: RegisterComponent }
 
   ]},
   {path: 'customers', component: CustomersComponent, children: [

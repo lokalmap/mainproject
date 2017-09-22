@@ -19,9 +19,8 @@ import { CollapseModule } from 'ngx-bootstrap';
 
 // Routing Module
 import { AppRoutingModule } from './services/app.routing';
-import { AppSecureRoutingModule } from './services/app-secure.routing';
+//import { AppSecureRoutingModule } from './services/app-secure.routing';
 // Layouts
-import { FullLayoutComponent } from './layouts/full-layout.component';
 import { LokalHeader } from './layouts/lokalheader.component';
 
 //newly install component
@@ -64,7 +63,7 @@ import { InfoComponent } from './customers/info/info.component';
     CarouselModule.forRoot(),
     CollapseModule,
     AppRoutingModule,
-    AppSecureRoutingModule,
+//    AppSecureRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     //start here
@@ -79,7 +78,6 @@ import { InfoComponent } from './customers/info/info.component';
 
   declarations: [
     AppComponent,
-    FullLayoutComponent,
     LokalHeader,
     MapUiComponent,
     FrontendComponent,
