@@ -1,6 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 //import { BrowserModule } from '@angular/platform-browser';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -39,6 +39,19 @@ import { PartialsComponent } from './usercomp/partials/partials.component';
 import { environment } from '../environments/environment';
 //Services
 import { DataService } from './services/data.service';
+import { ProvidersComponent } from './providers/providers.component';
+import { CustomersComponent } from './customers/customers.component';
+import { DashboardComponent } from './providers/dashboard/dashboard.component';
+import { SumInventoryComponent } from './providers/sum-inventory/sum-inventory.component';
+import { MyInventoryComponent } from './providers/my-inventory/my-inventory.component';
+import { StatisticsComponent } from './providers/statistics/statistics.component';
+import { ChatComponent } from './providers/chat/chat.component';
+import { AdsComponent } from './providers/ads/ads.component';
+import { SearchComponent } from './providers/search/search.component';
+import { HomeComponent } from './customers/home/home.component';
+import { HistoryComponent } from './customers/history/history.component';
+import { BookReserveComponent } from './customers/book-reserve/book-reserve.component';
+import { InfoComponent } from './customers/info/info.component';
 //end here
 
 
@@ -67,19 +80,32 @@ import { DataService } from './services/data.service';
     MapUiComponent,
     FrontendComponent,
     NAV_DROPDOWN_DIRECTIVES,
-    BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
+    BreadcrumbsComponent,
     AsideToggleDirective,
     UserprofComponent,
     RegisterComponent,
     LoginComponent,
-    PartialsComponent
+    PartialsComponent,
+    ProvidersComponent,
+    CustomersComponent,
+    DashboardComponent,
+    SumInventoryComponent,
+    MyInventoryComponent,
+    StatisticsComponent,
+    ChatComponent,
+    AdsComponent,
+    SearchComponent,
+    HomeComponent,
+    HistoryComponent,
+    BookReserveComponent,
+    InfoComponent
   ],
   providers: [
   DataService,
   {
     provide: LocationStrategy,
-    useClass: HashLocationStrategy
+    useClass: PathLocationStrategy
   }],
   bootstrap: [ AppComponent ]
 })

@@ -1,0 +1,30 @@
+<header class="app-header navbar">
+    <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button"  (click)="testf()">&#9776;</button>
+    <a class="navbar-brand"></a>
+    <ul class="nav navbar-nav hidden-md-down">
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler sidebar-toggler" routerLink="/customers" (click)="testf()">&#9776;</a>
+        </li>
+    </ul>
+</header>
+<div class="app-body">
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['/providers/home']"><i class="icon-speedometer"></i> Home <span class="badge badge-info">NEW</span></a>
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/history']"><i class="icon-speedometer"></i> History <span class="badge badge-info">NEW</span></a>
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/bookings']"><i class="icon-speedometer"></i> Bookings <span class="badge badge-info">NEW</span></a>
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/info']"><i class="icon-speedometer"></i> Profile Info <span class="badge badge-info">NEW</span></a>
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/chat']"><i class="icon-speedometer"></i> Chat <span class="badge badge-info">NEW</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main class="main">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+</div>
