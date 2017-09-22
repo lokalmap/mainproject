@@ -9,6 +9,7 @@ import { LokalHeader } from '../layouts/lokalheader.component';
 import { FrontendComponent } from '../frontend/frontend.component';
 import { MapUiComponent } from '../maps-ui/map-ui.component';
 
+
 import { PartialsComponent } from '../usercomp/partials/partials.component';
 import { UserprofComponent } from '../usercomp/userprof/userprof.component';
 import { RegisterComponent } from '../usercomp/register/register.component';
@@ -26,9 +27,12 @@ export const routes: Routes = [
   ]},
   {path: 'users', component: PartialsComponent, children: [
     {path: 'login', component: LoginComponent },
-    {path: 'register', component: RegisterComponent }
+    {path: 'register', component: RegisterComponent },
+    {path: 'full-layout', component: FullLayoutComponent}
+
   ]},
   {path: 'full-layout', component: FullLayoutComponent, children: [
+  //  {path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
   ]}
 ];
 

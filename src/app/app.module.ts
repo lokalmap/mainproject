@@ -17,7 +17,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 // Routing Module
 import { AppRoutingModule } from './services/app.routing';
-
+import { AppSecureRoutingModule } from './services/app-secure.routing';
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { LokalHeader } from './layouts/lokalheader.component';
@@ -47,6 +47,7 @@ import { DataService } from './services/data.service';
     BrowserModule,
     CarouselModule.forRoot(),
     AppRoutingModule,
+    AppSecureRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     //start here
