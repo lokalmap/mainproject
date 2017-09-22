@@ -12,9 +12,10 @@ import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 
-//carousel
+//ngx-bootstrap
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap';
+
 
 // Routing Module
 import { AppRoutingModule } from './services/app.routing';
