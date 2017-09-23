@@ -25,14 +25,15 @@
   </form>
 </div>-->
 
-<!-- <div class="app_register flex-row align-items-center">
+
+<div class="app_register flex-row align-items-center">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card mx-4">
           <div class="card-block p-4">
-            <h1>Sign up</h1>
-            <p class="text-muted">Customer Registration</p>
+            <h1>Register</h1>
+            <p class="text-muted">Create your account</p>
             <div class="input-group mb-3">
               <span class="input-group-addon"><i class="icon-user"></i></span>
               <input type="text" class="form-control" placeholder="Username">
@@ -53,10 +54,16 @@
               <input type="password" class="form-control" placeholder="Repeat password">
             </div>
 
-            <div class="input-group mb-4">
-              <span class="input-group-addon"><i class="icon-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Contact Number">
-            </div>
+            <div class="btn-group" dropdown container="body">
+  <button dropdownToggle type="button" class="btn btn-primary dropdownToggle">
+    User type <span class="caret"></span>
+  </button>
+  <ul *dropdownMenu class="dropdown-menu" role="menu">
+    <li role="menuitem"><a class="dropdown-item" href="#">Customer</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#">Provider</a></li>
+  </ul>
+</div>
+
 
             <button type="button" class="btn btn-block btn-success">Create Account</button>
           </div>
@@ -71,17 +78,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<div class="app_register flex-row align-items-center">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-
-          <router-outlet></router-outlet>
-
       </div>
     </div>
   </div>
