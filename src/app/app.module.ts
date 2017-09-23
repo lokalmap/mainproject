@@ -55,6 +55,8 @@ import { HistoryComponent } from './customers/history/history.component';
 import { BookReserveComponent } from './customers/book-reserve/book-reserve.component';
 import { InfoComponent } from './customers/info/info.component';
 import { PbookingsComponent } from './providers/pbookings/pbookings.component';
+import { RproviderComponent } from './usercomp/register/rprovider/rprovider.component';
+import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.component';
 
 //end here
 
@@ -105,7 +107,9 @@ import { PbookingsComponent } from './providers/pbookings/pbookings.component';
     HistoryComponent,
     BookReserveComponent,
     InfoComponent,
-    PbookingsComponent
+    PbookingsComponent,
+    RproviderComponent,
+    RcustomerComponent
   ],
   providers: [
   DataService,

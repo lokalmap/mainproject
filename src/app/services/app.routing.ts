@@ -13,6 +13,8 @@ import { PartialsComponent } from '../usercomp/partials/partials.component';
 import { UserprofComponent } from '../usercomp/userprof/userprof.component';
 import { RegisterComponent } from '../usercomp/register/register.component';
 import { LoginComponent } from '../usercomp/login/login.component';
+import { RcustomerComponent } from '../usercomp/register/rcustomer/rcustomer.component';
+import { RproviderComponent } from '../usercomp/register/rprovider/rprovider.component';
 
 import { ProvidersComponent } from '../providers/providers.component';
 import { CustomersComponent } from '../customers/customers.component';
@@ -56,6 +58,11 @@ export const routes: Routes = [
     {path: 'ads', component: AdsComponent },
     {path: 'search', component: SearchComponent }
   ]},
+
+{ path: 'register', component: RegisterComponent, children: [
+{ path: 'rcustomer', component: RcustomerComponent },
+{ path: 'rprovider', component: RproviderComponent }
+] },
 
 ];
 
