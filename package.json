@@ -1,11 +1,11 @@
 {
-  "name": "genesisui-angular",
+  "name": "lokalmap-angular4",
   "version": "1.8.4",
-  "description": "Bootstrap 4 Admin Template",
-  "author": "",
-  "url": "https://genesisui.com",
-  "copyright": "Copyright 2017 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
+  "description": "Bootstrap 4 Template",
+  "author": "lokalmap inc.",
+  "url": "https://lokalmap.com",
+  "copyright": "Copyright 2017 Lokalmap",
+  "license": "none",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
@@ -17,7 +17,7 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.1",
-    "@angular/animations": "4.1.3",
+    "@angular/animations": "^4.1.3",
     "@angular/common": "4.1.3",
     "@angular/compiler": "4.1.3",
     "@angular/core": "4.1.3",
@@ -40,8 +40,9 @@
     "ng2-charts": "1.6.0",
     "ng2-dragula": "1.5.0",
     "ng2-select": "1.2.0",
-    "ngx-bootstrap": "1.7.1",
-    "rxjs": "5.4.0",
+    "ngx-bootstrap": "^1.7.1",
+    "ngx-toastr": "^6.3.0",
+    "rxjs": "^5.4.0",
     "ts-helpers": "1.1.2",
     "zone.js": "0.8.12"
   },

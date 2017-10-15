@@ -39,7 +39,12 @@ import { PartialsComponent } from './usercomp/partials/partials.component';
 
 import { environment } from '../environments/environment';
 //Services
+
+//Http service
+import { HttpModule } from '@angular/http';
 import { DataService } from './services/data.service';
+//import { HttpClientModule } from '@angular/common/http';
+
 import { ProvidersComponent } from './providers/providers.component';
 import { CustomersComponent } from './customers/customers.component';
 import { DashboardComponent } from './providers/dashboard/dashboard.component';
@@ -64,6 +69,7 @@ import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.comp
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     CarouselModule.forRoot(),
     CollapseModule,
     AppRoutingModule,
@@ -112,11 +118,11 @@ import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.comp
     RcustomerComponent
   ],
   providers: [
-  DataService,
-  {
-    provide: LocationStrategy,
-    useClass: PathLocationStrategy
-  }],
-  bootstrap: [ AppComponent ]
+    DataService,
+    {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+    }],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }
