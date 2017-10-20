@@ -1,7 +1,8 @@
 <p>
   testing!
 </p>
-<button type="button" class="btn btn-primary" (click)="getPost()">Click me!</button>
+<button type="button" class="btn btn-primary" (click)="sendPost()">Click me! sendPost</button>
+<button type="button" class="btn btn-primary" (click)="getPost()">Click me! getPost</button>
 
 <div *ngFor="let post of posts | async">
   {{post | json }}

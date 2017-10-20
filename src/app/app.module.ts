@@ -43,7 +43,7 @@ import { environment } from '../environments/environment';
 //Http service
 import { HttpModule } from '@angular/http';
 import { DataService } from './services/data.service';
-//import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 
 import { ProvidersComponent } from './providers/providers.component';
 import { CustomersComponent } from './customers/customers.component';
@@ -70,6 +70,7 @@ import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.comp
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     CarouselModule.forRoot(),
     CollapseModule,
     AppRoutingModule,

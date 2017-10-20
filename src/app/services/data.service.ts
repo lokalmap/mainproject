@@ -12,6 +12,7 @@ export class DataService {
 
 urlget(urlvar:string){
   console.log("Test Get urlvar: " + urlvar);
+
   return this.httpClient.get('https://jsonplaceholder.typicode.com/posts/1').map(res => res.json());
 }
 /*
