@@ -1,9 +1,16 @@
+<h1>testing!</h1>
+<div class="input-group">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button" (click)="getPost(uidt.value)">getPost</button>
+  </span>
+  <input type="text" class="form-control" #uidt placeholder="userId...">
+</div>
 <p>
-  testing!
+  ___________________________
 </p>
 <button type="button" class="btn btn-primary" (click)="sendPost()">Click me! sendPost</button>
-<button type="button" class="btn btn-primary" (click)="getPost()">Click me! getPost</button>
-
 <div *ngFor="let post of posts | async">
   {{post | json }}
 </div>
+<button type="button" class="btn btn-primary" (click)="createPost()">Click me! createPost</button>
+{{ newPost | async | json }}
