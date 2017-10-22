@@ -63,6 +63,14 @@ import { PbookingsComponent } from './providers/pbookings/pbookings.component';
 import { RproviderComponent } from './usercomp/register/rprovider/rprovider.component';
 import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.component';
 
+import { customHttpProvider } from './_helpers/index';
+import { AlertComponent } from './_directives/index';
+import { AuthGuard } from './_guards/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
+
+
+import { FormsModule } from '@angular/forms';
+
 //end here
 
 
@@ -74,6 +82,7 @@ import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.comp
     CarouselModule.forRoot(),
     CollapseModule,
     AppRoutingModule,
+    FormsModule,
 //    AppSecureRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
@@ -120,6 +129,11 @@ import { RcustomerComponent } from './usercomp/register/rcustomer/rcustomer.comp
   ],
   providers: [
     DataService,
+    AuthGuard,
+    customHttpProvider,
+      AlertService,
+      AuthenticationService,
+      UserService,
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy

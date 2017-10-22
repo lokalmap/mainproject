@@ -25,7 +25,8 @@
 
     <div class="input-prepend input-group hero_Input">
       <span class="input-group-addon"><i class="fa fa-search"></i></span>
-      <input id="prependedInput" class="form-control" #search formControl="searchControl" type="search" placeholder="What are you looking for?">
+      <input  class="form-control" name="searchMe" #search [(ngModel)]="searchMe" type="search" placeholder="What are you looking for?">
+
 
       <!---<span class="input-group-btn">
           <button class="btn btn-danger" type="button" routerLink="/simple-layout/maps-ui">Search</button>
