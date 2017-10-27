@@ -2998,7 +2998,8 @@ tbody.collapse.in {
   color: rgba(0, 0, 0, 0.9); }
 
 .navbar-light .navbar-toggler, .navbar-light .aside-toggle {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image:
+  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   border-color: rgba(0, 0, 0, 0.1); }
 
 .navbar-light .navbar-divider {
@@ -3115,7 +3116,7 @@ header.navbar {
     height: 50px;
     padding: 0.5rem 1rem;
     background-color: #1c1f21;
-    background-image: url("../img/logo.png");
+  /*  background-image: url("../img/logo.png");*/
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 90px auto;
