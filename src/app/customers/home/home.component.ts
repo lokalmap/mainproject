@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
   getPost(uidt){
       console.log('test button clicked' + uidt);
       let params = new HttpParams().set('userId',uidt);
-      this.posts = this.http.get(this.Rootkk + '/posts',{params});
+//      this.posts = this.http.get(this.Rootkk + '/posts',{params});
+//      this.posts = this.http.get('http://192.168.1.1:3000/api/test');
       console.log(this.posts);
   }
   sendPost(){

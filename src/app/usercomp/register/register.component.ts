@@ -7,9 +7,6 @@ import { AlertService, UserService } from '../../_services/index';
     moduleId: module.id,
     templateUrl: 'register.component.html'
 })
-
-
-
 export class RegisterComponent {
     model: any = {};
     loading = false;

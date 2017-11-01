@@ -1,3 +1,10 @@
-<p>
-  history works!
-</p>
+
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/history/bookinghist']">My Bookings</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['/customers/history/storehist']">Visited Store</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

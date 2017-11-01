@@ -31,7 +31,8 @@ import { HomeComponent } from '../customers/home/home.component';
 import { HistoryComponent } from '../customers/history/history.component';
 import { BookReserveComponent } from '../customers/book-reserve/book-reserve.component';
 import { InfoComponent } from '../customers/info/info.component';
-
+import { BookinghistComponent } from '../shared/bookinghist/bookinghist.component';
+import { StorehistComponent } from '../shared/storehist/storehist.component';
 
 export const routes: Routes = [
   {path: '', component:FrontendComponent, pathMatch: 'full'},
@@ -43,7 +44,10 @@ export const routes: Routes = [
   ]},
   {path: 'customers', component: CustomersComponent, children: [
     {path: 'home', component: HomeComponent },
-    {path: 'history', component: HistoryComponent },
+    {path: 'history', component: HistoryComponent,children: [
+      {path:'bookinghist',component: BookinghistComponent},
+      {path:'storehist',component: StorehistComponent}
+    ]},
     {path: 'bookings', component: BookReserveComponent },
     {path: 'info', component: InfoComponent },
     {path: 'chat', component: CChatComponent }

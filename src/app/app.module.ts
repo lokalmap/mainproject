@@ -70,6 +70,8 @@ import { AlertService, AuthenticationService, UserService } from './_services/in
 
 
 import { FormsModule } from '@angular/forms';
+import { BookinghistComponent } from './shared/bookinghist/bookinghist.component';
+import { StorehistComponent } from './shared/storehist/storehist.component';
 
 //end here
 
@@ -125,7 +127,9 @@ import { FormsModule } from '@angular/forms';
     InfoComponent,
     PbookingsComponent,
     RproviderComponent,
-    RcustomerComponent
+    RcustomerComponent,
+    BookinghistComponent,
+    StorehistComponent
   ],
   providers: [
     DataService,
