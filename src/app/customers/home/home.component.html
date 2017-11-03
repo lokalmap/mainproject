@@ -16,8 +16,10 @@
 {{ newPost | async | json }}  -->
 
 
-<div *ngIf="lat && lng">
-  <agm-map class="map_side" style= "height: 505px" [latitude]="lat" [longitude]="lng" [zoom]="17">
+
+<div *ngIf="lat && lng" class="map_holder mt-3">
+
+  <agm-map class="map_side_cust" style="height: 600px" [latitude]="lat" [longitude]="lng" [zoom]="17">
     <agm-marker [latitude]="lat" [longitude]="lng">
       <agm-info-window>
         <h3><strong>Howdy!</strong></h3>
