@@ -296,5 +296,64 @@ body:not(.top-nav) {
 //book_customer
 
 .cont_book {
-  
+
+}
+
+//book_profile
+
+.user_tag {
+  background-color: #34383c;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 60px;
+  border-bottom: 0;
+  padding-top: 15px;
+  padding-left: 15px;
+
+}
+
+.user_profile {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #d6d4d4;
+  border-radius: 50%;
+}
+
+.holder_profile {
+  margin-left: auto;
+   margin-right: auto;
+   display:block;
+   text-align: center;
+
+}
+
+.profile_display {
+  //background-color: gray;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+.profile_container {
+  border-left: 1px solid #d6d4d4;
+  border-right: 1px solid #d6d4d4;
+}
+
+.name_tag {
+  padding-top: 19px;
+}
+.data_holder {
+
+}
+
+.table_container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-left: 1px solid #d6d4d4;
+  border-right: 1px solid #d6d4d4;
+  border-bottom: 1px solid #d6d4d4;
+}
+
+#line_holder {
+  margin-top: 0;
+  margin-bottom: 0;
 }
