@@ -15,6 +15,7 @@ import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 //ngx-bootstrap
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap';
+import { ModalModule } from 'ngx-bootstrap/modal'
 
 
 // Routing Module
@@ -85,6 +86,7 @@ import { StorehistComponent } from './shared/storehist/storehist.component';
     CollapseModule,
     AppRoutingModule,
     FormsModule,
+    ModalModule.forRoot(),
 //    AppSecureRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),

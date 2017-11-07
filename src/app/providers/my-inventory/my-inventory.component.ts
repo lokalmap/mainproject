@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,TemplateRef } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 
 @Component({
   selector: 'app-my-inventory',
@@ -6,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-inventory.component.scss']
 })
 export class MyInventoryComponent implements OnInit {
-
-  constructor() { }
-
+  public modalRef:BsModalRef;
+  constructor(private modalService: BsModalService) { }
+  public openModal(template: TemplateRef<any>) {
+    console.log("++++++++++++");
+    this.modalRef = this.modalService.show(template);
+  }
   ngOnInit() {
   }
 
