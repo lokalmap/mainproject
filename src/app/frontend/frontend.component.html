@@ -1,1 +1,195 @@
+<nav class="navbar navbar-toggleable-md navbar-light nav_front fixed-top navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right"
+  type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent" (click)="isCollapsed = !isCollapsed"
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand text-light" routerLink="/customers">Lokalmap</a>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [collapse]="!isCollapsed">
+    <ul class="navbar-nav mr-auto">
+     <!-- mr-auto to move the right -->
+    </ul>
+    <a class="navbar-brand" routerLink="/users/login">Login</a>
+    <a class="navbar-brand" routerLink="/register">Sign Up</a>
+  </div>
+</nav>
+
+<div class="container front-end_bg" >
+  <div class="row ">
+    <div class="clearfix hero_SearchBody col mt-5 pt-5 col-md-6 col-sm-6">
+
+    <h1 class="float-left display-4 mr-2">Lokalmap</h1>
+    <h4 class="pt-1">Search Me!!</h4>
+
+    <div class="input-prepend input-group hero_Input">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <input  class="form-control" name="searchMe" #search [(ngModel)]="searchMe" type="search" placeholder="What are you looking for?">
+
+
+      <!---<span class="input-group-btn">
+          <button class="btn btn-danger" type="button" routerLink="/simple-layout/maps-ui">Search</button>
+      </span>-->
+
+      </div>
+      <br>
+<!--
+          <div class="card card-inverse card-warning">
+            <img src="/assets/img/1.jpg" alt="" class="h-25">
+            <div class="card-header lead">
+              Name of the Store
+            </div>
+            <div class="card-block lead">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+              aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+              exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </div>
+          </div> -->
+
+    <div class="card">
+  <img class="card-img-top initialize_Img mb-3" src="/assets/img/7.jpg" alt="initialize">
+  <div class="card-header lead">
+    Name of the Store
+  </div>
+  <div class="card-block lead">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+  </div>
+  </div>
+
+  </div>
+
+
+  <div class="otherSide col mt-5 pt-5 col-md-6 col-sm-6">
+
+
+    <div *ngIf="lat && lng">
+      <agm-map class="map_side" style= "height: 505px" [latitude]="lat" [longitude]="lng" [zoom]="17">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+          <agm-info-window>
+            <h3><strong>Howdy!</strong></h3>
+            <p>You are here!</p>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+
+     </div>
+
+
+  <div class="container opt_in bg-inverse">
+
+
+ <div  id="feature_" class="lead text-capitalize align-middle">Featured of the month</div>
+
+ <div class="row opt_in_img">
+           <div class="col">
+             <carousel>
+              <slide>
+               <img src="/assets/img/store1.jpg" alt="First slide">
+              </slide>
+              <slide>
+                <img src="/assets/img/7.jpg" alt="Second slide">
+              </slide>
+              <slide>
+                <img src="/assets/img/7.jpg" alt="Third slide">
+              </slide>
+            </carousel>
+           </div>
+ </div>
+ <br>
+ <p class="text-capitalize align-middle ">Lorem ipsum dolor sit amet,
+    consectetur adipisicing elit. Corrupti quaerat minima eveniet ratione
+     asperiores molestiae, culpa sequi voluptatibus, veniam earum exercitationem
+      doloribus animi quae odit. Rerum debitis, voluptatem mollitia fuga.</p>
+ </div>
+
+ <footer class="footer-distributed">
+
+ 			<div class="footer-left">
+
+ 				<h3>Company<span>logo</span></h3>
+
+ 				<p class="footer-links">
+ 					<a href="#">Home</a>
+ 					·
+ 					<a href="#">Blog</a>
+ 					·
+ 					<a href="#">Pricing</a>
+ 					·
+ 					<a href="#">About</a>
+ 					·
+ 					<a href="#">Faq</a>
+ 					·
+ 					<a href="#">Contact</a>
+ 				</p>
+
+ 				<p class="footer-company-name">Company Name &copy; 2015</p>
+ 			</div>
+
+ 			<div class="footer-center">
+
+ 				<div>
+ 					<i class="fa fa-map-marker"></i>
+ 					<p><span>21 Revolution Street</span> Paris, France</p>
+ 				</div>
+
+ 				<div>
+ 					<i class="fa fa-phone"></i>
+ 					<p>+1 555 123456</p>
+ 				</div>
+
+ 				<div>
+ 					<i class="fa fa-envelope"></i>
+ 					<p><a href="mailto:support@company.com">support@company.com</a></p>
+ 				</div>
+
+ 			</div>
+
+ 			<div class="footer-right">
+
+ 				<p class="footer-company-about">
+ 					<span>About the company</span>
+ 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+ 				</p>
+
+ 				<div class="footer-icons">
+
+ 					<a href="#"><i class="fa fa-facebook"></i></a>
+ 					<a href="#"><i class="fa fa-twitter"></i></a>
+ 					<a href="#"><i class="fa fa-linkedin"></i></a>
+ 					<a href="#"><i class="fa fa-github"></i></a>
+
+ 				</div>
+
+ 			</div>
+
+ 		</footer>
+
+  </div>
+</div>
+
+
+<!-- <div class="container opt_in bg-inverse">
+<div class="lead text-capitalize align-middle">Featured of the month</div>
+<div class="row opt_in_img">
+          <div class="col">
+              <img class=" img-thumbnail" src="/assets/img/store1.jpg" alt="">
+          </div>
+          <div class="col">
+              <img class="img-thumbnail" src="/assets/img/store1.jpg" alt="">
+          </div>
+          <div class="col">
+              <img class=" img-thumbnail" src="/assets/img/store3.jpg  " alt="">
+          </div>
+</div>
+<br>
+<p class="text-capitalize align-middle lead">Lorem ipsum dolor sit amet,
+   consectetur adipisicing elit. Corrupti quaerat minima eveniet ratione
+    asperiores molestiae, culpa sequi voluptatibus, veniam earum exercitationem
+     doloribus animi quae odit. Rerum debitis, voluptatem mollitia fuga.</p>
+</div> -->
