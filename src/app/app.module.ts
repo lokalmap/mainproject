@@ -22,7 +22,7 @@ import { ModalModule } from 'ngx-bootstrap/modal'
 import { AppRoutingModule } from './services/app.routing';
 //import { AppSecureRoutingModule } from './services/app-secure.routing';
 // Layouts
-import { LokalHeader } from './layouts/lokalheader.component';
+//import { LokalHeaderComponent } from './layouts/lokalheader.component';
 
 //newly install component
 import { FrontendComponent } from './frontend/frontend.component';
@@ -36,7 +36,6 @@ import { AgmCoreModule } from '@agm/core';
 import { UserprofComponent } from './usercomp/userprof/userprof.component';
 import { RegisterComponent } from './usercomp/register/register.component';
 import { LoginComponent } from './usercomp/login/login.component';
-import { PartialsComponent } from './usercomp/partials/partials.component';
 
 import { environment } from '../environments/environment';
 //Services
@@ -102,7 +101,7 @@ import { StorehistComponent } from './shared/storehist/storehist.component';
 
   declarations: [
     AppComponent,
-    LokalHeader,
+//    LokalHeaderComponent,
     MapUiComponent,
     FrontendComponent,
     NAV_DROPDOWN_DIRECTIVES,
@@ -112,7 +111,6 @@ import { StorehistComponent } from './shared/storehist/storehist.component';
     UserprofComponent,
     RegisterComponent,
     LoginComponent,
-    PartialsComponent,
     ProvidersComponent,
     CustomersComponent,
     DashboardComponent,
@@ -137,9 +135,9 @@ import { StorehistComponent } from './shared/storehist/storehist.component';
     DataService,
     AuthGuard,
     customHttpProvider,
-      AlertService,
-      AuthenticationService,
-      UserService,
+    AlertService,
+    AuthenticationService,
+    UserService,
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy

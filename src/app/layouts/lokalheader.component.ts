@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-lokal',
   templateUrl: './lokalheader.component.html',
 })
-export class LokalHeader implements OnInit {
+export class LokalHeaderComponent implements OnInit {
 
   constructor() { }
 

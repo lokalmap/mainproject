@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { AuthGuard } from '../_guards';
 // Layouts
-import { LokalHeader } from '../layouts/lokalheader.component';
+import { LokalHeaderComponent } from '../layouts/lokalheader.component';
 
 //files to be imported
 import { FrontendComponent } from '../frontend/frontend.component';
 import { MapUiComponent } from '../maps-ui/map-ui.component';
 
-
-import { PartialsComponent } from '../usercomp/partials/partials.component';
 import { UserprofComponent } from '../usercomp/userprof/userprof.component';
 import { RegisterComponent } from '../usercomp/register/register.component';
 import { LoginComponent } from '../usercomp/login/login.component';
@@ -36,12 +34,8 @@ import { StorehistComponent } from '../shared/storehist/storehist.component';
 
 export const routes: Routes = [
   {path: '', component:FrontendComponent, pathMatch: 'full'},
-  {path: 'users', component: PartialsComponent, children: [
-    {path: 'login', component: LoginComponent },
-    {path: 'register', component: RegisterComponent },
-
-
-  ]},
+  {path: 'login', component: LoginComponent },
+  {path: 'register', component: RegisterComponent },
   {path: 'customers', component: CustomersComponent, children: [
     {path: 'home', component: HomeComponent },
     {path: 'history', component: HistoryComponent,children: [
@@ -69,6 +63,20 @@ export const routes: Routes = [
 ] },
 
 ];
+const routesv2: Routes = [
+    {
+        path: '',
+//        loadChildren: '../frontend/frontend.module#FrontendModule'
+        loadChildren: '../layouts/layout.module#LayoutModule'
+//        canActivate: [AuthGuard]
+    }
+    //,{ path: 'login', loadChildren: '../usercomp/login.module#LoginModule' }
+    //{ path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
+    //{ path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
+    //{ path: '**', redirectTo: 'not-found' }
+];
+
+
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes, { useHash: true }) ],
